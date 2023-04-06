@@ -1,4 +1,5 @@
 import { Text } from 'components/Feedback.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ feedbacks, total, positivePercentage }) => {
     return (
@@ -13,3 +14,9 @@ export const Statistics = ({ feedbacks, total, positivePercentage }) => {
         </div>
     )
 }
+
+Statistics.propTypes = {
+  feedbacks: PropTypes.objectOf(PropTypes.number).isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired,
+};

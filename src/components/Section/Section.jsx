@@ -1,4 +1,5 @@
 import { Container, Title } from 'components/Feedback.styled';
+import PropTypes from 'prop-types';
 
 export const Section = ({ title = 'Hello', children }) => {
     return (
@@ -10,3 +11,8 @@ export const Section = ({ title = 'Hello', children }) => {
         </>
     )
 }
+
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.element,
+};
